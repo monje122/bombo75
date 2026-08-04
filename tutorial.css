@@ -1,0 +1,141 @@
+.tutorial {
+  padding-block: 100px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
+  gap: 90px;
+  align-items: center;
+}
+
+.tutorial-copy h2 {
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 1.04;
+  letter-spacing: -.045em;
+  margin: 0 0 20px;
+}
+
+.tutorial-copy > p:not(.eyebrow) {
+  max-width: 610px;
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 19px;
+}
+
+.video-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--cyan);
+  font-weight: 900;
+  border-bottom: 1px solid rgba(34, 215, 197, .45);
+  padding-bottom: 3px;
+}
+
+.video-link:hover {
+  color: #7cf8ec;
+}
+
+.video-link:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
+.tutorial-phone {
+  width: min(390px, 88vw);
+  margin-inline: auto;
+  padding: 18px 13px 20px;
+  border: 7px solid #1a3047;
+  border-radius: 48px;
+  background: linear-gradient(160deg, #152b42, #07111f);
+  box-shadow: var(--shadow), 0 0 80px rgba(34, 215, 197, .13), inset 0 0 0 1px #3c5771;
+  position: relative;
+}
+
+.tutorial-speaker {
+  width: 82px;
+  height: 6px;
+  margin: 0 auto 12px;
+  border-radius: 99px;
+  background: #3a5067;
+}
+
+.tutorial-screen {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 9 / 18.6;
+  border-radius: 31px;
+  background: #02070d;
+}
+
+.tutorial-screen iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.tutorial-home {
+  width: 82px;
+  height: 5px;
+  margin: 14px auto 0;
+  border-radius: 99px;
+  background: #62758a;
+}
+
+.download-tutorial {
+  padding-top: 0;
+}
+
+.download-tutorial .tutorial-copy {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.download-tutorial .tutorial-phone {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+@media (max-width: 900px) {
+  .tutorial {
+    grid-template-columns: 1fr;
+    gap: 46px;
+    text-align: center;
+  }
+
+  .tutorial-copy {
+    display: grid;
+    justify-items: center;
+  }
+
+  .download-tutorial .tutorial-copy,
+  .download-tutorial .tutorial-phone {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .tutorial {
+    padding-block: 70px;
+  }
+
+  .tutorial-copy h2 {
+    font-size: 38px;
+  }
+
+  .tutorial-copy > p:not(.eyebrow) {
+    font-size: 17px;
+  }
+
+  .tutorial-phone {
+    width: min(350px, 92vw);
+    border-width: 6px;
+    border-radius: 42px;
+  }
+
+  .tutorial-screen {
+    border-radius: 27px;
+  }
+}
